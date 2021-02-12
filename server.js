@@ -20,21 +20,14 @@ app.use(express.static(__dirname + '/public'));
 app.use(layouts);
 
 // Session Middleware
-
-// secret: What we actually will be giving the user on our site as a session cookie
-// resave: Save the session even if it's modified, make this false
-// saveUninitialized: If we have a new session, we save it, therefore making that true
-
 const sessionObject = {
   secret: SECRET_SESSION,
   resave: false,
   saveUninitialized: true
 }
 app.use(session(sessionObject));
-// Passport
-app.use(passport.initialize()); // Initialize passport
-app.use(passport.session()); // Add a session
-// Flash 
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(flash());
 app.use((req, res, next) => {
   console.log(res.locals);
