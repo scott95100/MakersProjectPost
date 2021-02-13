@@ -33,7 +33,7 @@ As a woodworker hobbiest I wanted a place to go and share/ discuss projects that
 
 ### Database relations
 
-
+<img width="715" alt="database logic" src="https://user-images.githubusercontent.com/77864402/107859753-dc48af00-6df8-11eb-8eac-fa6112adcfbb.png">
 
 
 #### 4. Technologies & Code Snippets
