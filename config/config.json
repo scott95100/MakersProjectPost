@@ -1,17 +1,16 @@
 {
   "development": {
-    
-    "database": "MakersProjectPost_dev",
+    "database": "MakersProjectPost",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "MakersProjectPost_test",
+    "database": "MakersProjectPost",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "database": "MakersProjectPost_production",
+    "database": "MakersProjectPost",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
