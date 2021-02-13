@@ -8,7 +8,14 @@ As a woodworker hobbiest I wanted a place to go and share/ discuss projects that
 
 ### User Model
 
-
+    * You can create a profile
+    * You can add a project you as a craftsman are working on
+        * project photo
+        * project title
+        * project discription
+    * You can delete projects you have added to the database
+    * You can view the project library from other users posts
+    * You can search for diffirent wood species to use with your projects
 
 ### User Stories & Wirefames
 
@@ -22,13 +29,10 @@ As a woodworker hobbiest I wanted a place to go and share/ discuss projects that
 <img width="998" alt="wood search api page" src="https://user-images.githubusercontent.com/77864402/107859084-7d813680-6df4-11eb-8718-28be57a10609.png">
     ##All pages view
 <img width="1078" alt="all pages" src="https://user-images.githubusercontent.com/77864402/107859115-925dca00-6df4-11eb-8cfb-bf348b50a4e9.png">
-### Steps To Use
 
-#### 1. 
 
-#### 2.
+### Database relations
 
-#### 3. 
 
 
 
@@ -38,6 +42,7 @@ As a woodworker hobbiest I wanted a place to go and share/ discuss projects that
 
 #### 5. credits
 
+Insparation taken from vairous social media plateforms to include, Etsy, Facebook and Instagrame. 
 
 
 #### 6. Future development
