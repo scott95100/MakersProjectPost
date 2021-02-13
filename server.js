@@ -9,17 +9,17 @@ const flash = require('connect-flash');
 const app = express();
 app.set('view engine', 'ejs');
 
-// Session 
+///SESSION///
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const isLoggedIn = require('./middleware/isLoggedIn');
 
-// MIDDLEWARE
+///MIDDLEWARE///
 app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 app.use(layouts);
 
-// Session Middleware
+///SESSION MIDDLEWARE///
 const sessionObject = {
   secret: SECRET_SESSION,
   resave: false,
@@ -36,8 +36,11 @@ app.use((req, res, next) => {
   next();
 });
 
-// Controllers
+///CONTROLLERS///
 app.use('/auth', require('./controllers/auth'));
+
+
+
 
 app.get('/', (req, res) => {
   res.render('index');
