@@ -39,6 +39,10 @@ app.use((req, res, next) => {
 ///CONTROLLERS///
 app.use('/auth', require('./controllers/auth'));
 
+app.use('/projects', require('./controllers/projects'))
+
+app.use('/lumber', require('./controllers/lumber'))
+
 
 
 
