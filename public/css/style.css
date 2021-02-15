@@ -23,7 +23,7 @@ nav ul li {
 html body {
   
   background-repeat: no-repeat;
-  background-color: #ac9b9b;
+  /* background-color: #ac9b9b; */
   background-size: cover;
   height: 100%;
   overflow: hidden;
