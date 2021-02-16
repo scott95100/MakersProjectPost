@@ -4,11 +4,14 @@ const layouts = require('express-ejs-layouts');
 const session = require('express-session');
 const passport = require('./config/ppConfig'); //
 const flash = require('connect-flash');
+// const cloudinary = require('cloudinary');
+// const multer = require('multer');
+// const uploads = multer({ dest: './uploads'});
 
 
 const app = express();
 app.set('view engine', 'ejs');
-
+0
 ///SESSION///
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const isLoggedIn = require('./middleware/isLoggedIn');
