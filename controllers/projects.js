@@ -3,6 +3,7 @@ let db = require('../models')
 let router = express.Router()
 const cloudinary = require('cloudinary');
 const multer = require('multer'); 
+const project = require('../models/project');
 const uploads = multer({ dest: './uploads'});
 
 
@@ -27,14 +28,21 @@ router.get('/images', (req, res)=> {
 })
 
 //need to build the forms post route
-router.post('/images', uploads.single('inputFile'), (req, res)=> {
+router.post('/new', uploads.single('inputFile'), (req, res)=> {
     const image = req.file.path
-    console.log(image)
-    cloudinary.uploader.upload(image, (result)=> {
-        //this should be the return from cloudinary
-        console.log(result)
-        res.render('/allPosted', { image: result.url })
-    })
+    cloudinary.uploader.upload(image, (result) => {
+        console.log(result); // object
+        profileUrl = result.url; // string
+        db.project.create({
+            title: project.title,
+            description: project.discription,
+            profilePic: profileUrl
+        })
+        .then(newUser => {
+            console.log(newUser.get());
+            res.render('allPosted', { project: newProject.get() });
+        })
+     })
 })
   
 module.exports = router
