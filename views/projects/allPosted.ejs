@@ -1,5 +1,19 @@
-<h1>This is the page where all the users projects will be posted</h1>
 
-<img src="<%= project.profilePic %>" alt="project pic">
-<p>title: <%= project.title %></p>
-<p>description: <%= project.description %></p>
+    <h2>List of Projects</h2>
+    
+    <% for (let i = 0; i < projectsArr.length; i++){%>
+        
+        <% let projectItem = projectsArr[i].get() %>
+        <img src="<%= projectItem.profilePic %>"> 
+        <p><%= projectItem.id %></p>
+        <p><%= projectItem.title %></p>
+        <p><%= projectItem.description %> </p>
+        
+
+    <%}%>
+
+
+
+
+
+

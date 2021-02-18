@@ -12,21 +12,31 @@ const db = require('../models');
 
 // GET /projects/new - display form for creating a new project
 router.get('/new', (req, res) => {
+    
     res.render('projects/new')
 })
 
 router.get('/allPosted', (req, res)=> {
-    res.render('projects/allPosted')
+    db.project.findAll({ 
+        where: {
+            userId: res.locals.currentUser.get().id
+        }
+    })
+    .then(projectsArr => {
+        console.log(projectsArr);
+        res.render('projects/allPosted', { projectsArr })
+    })
 })
   
 //get route that creates the view of the new project and 
-router.get('/projects/new', (req, res)=> {
-    res.render('/allPosted')
-})
+// router.get('/projects/new', (req, res)=> {
+//     res.render('/allPosted')
+// })
   
 router.get('/images', (req, res)=> {
     res.render('/allPosted')
 })
+
 
 //need to build the forms post route
 router.post('/new', uploads.single('inputFile'), (req, res)=> {
@@ -38,13 +48,31 @@ router.post('/new', uploads.single('inputFile'), (req, res)=> {
         db.project.create({
             title,
             description,
-            profilePic: profileUrl
+            profilePic: profileUrl,
+            userId: res.locals.currentUser.get().id
         })
         .then(newProject => {
             console.log(newProject.get());
-            res.render('/allPosted', { project: newProject.get() });
+            res.redirect('/projects/allPosted');
         })
-     })
+    })
 })
+
+// router.post('/new', (req, res)=> {
+//     console.log(req.body);
+//     db.project.create({
+//         userId: req.params.id,
+//         title: req.body.title,
+//         description: req.body.description
+    
+// })
+// .then((creatProject)=> {
+//     console.log('**Created**');
+//     res.redirect('/allPosted')
+// }).catch((error)=>{
+//     console.log(error)
+// })
+// })
+
   
 module.exports = router
