@@ -21,22 +21,35 @@ nav ul li {
 }
 
 html body {
-  
+  background-image: url("https://wallpaperaccess.com/full/3165466.jpg");
+  background-color: #cccccc;
+  height: 1500px;
+  background-position: center;
   background-repeat: no-repeat;
-  /* background-color: #ac9b9b; */
   background-size: cover;
-  height: 100%;
-  overflow: hidden;
+  position: relative;
+  
+ 
 }
 
-.bg {
-  opacity: .8;
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 100;
-  left: 0; 
-  
+
+
+.userProject {
+  background-color: grey;
+  width: 300px;
+  border: 10px solid black;
+  padding: 15px;
+  background: rgb(117, 102, 102);
+  background-clip: padding-box;
 }
+
+.userImage {
+  border: 10px solid white;
+  border-radius: 20%;
+  border-
+  height: 300px;
+  width: 300px;
+  opacity: .9;
+
+}
+

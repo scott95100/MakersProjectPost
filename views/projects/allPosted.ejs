@@ -1,15 +1,12 @@
 
     <h2>List of Projects</h2>
-    
-    <% for (let i = 0; i < projectsArr.length; i++){%>
-        
-        <% let projectItem = projectsArr[i].get() %>
-        <img src="<%= projectItem.profilePic %>"> 
-        <p><%= projectItem.id %></p>
-        <p><%= projectItem.title %></p>
-        <p><%= projectItem.description %> </p>
-        
 
+    <% for (let i = 0; i < projectsArr.length; i++){%>
+        <div class='userProject'>
+             <img class='userImage' src="<%= projectsArr[i].profilePic%> ">
+             <p class='userTitle'><%= projectsArr[i].title%></p> 
+             <p class='userDescription'><%= projectsArr[i].description %></p>
+        </div>
     <%}%>
 
 
