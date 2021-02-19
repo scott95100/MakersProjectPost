@@ -4,8 +4,12 @@
     <% for (let i = 0; i < projectsArr.length; i++){%>
         <div class='userProject'>
              <img class='userImage' src="<%= projectsArr[i].profilePic%> ">
-             <p class='userTitle'><%= projectsArr[i].title%></p> 
+             <p class='userTitle'><a href="/projects/<%=projectsArr[i].id%>"><%=projectsArr[i].title %></a></p> 
              <p class='userDescription'><%= projectsArr[i].description %></p>
+             
+             <form action="/projects/allPosted/<%=projectsArr[i].id%>?_method=DELETE" method="POST">
+                <button type="submit">Delete Project</button>
+            </form>
         </div>
     <%}%>
 

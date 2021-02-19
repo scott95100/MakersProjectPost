@@ -6,6 +6,7 @@ const multer = require('multer');
 const project = require('../models/project');
 const uploads = multer({ dest: './uploads'});
 
+
 const db = require('../models');
 
 
@@ -15,6 +16,8 @@ router.get('/new', (req, res) => {
     
     res.render('projects/new')
 })
+
+
 
 router.get('/allPosted', (req, res)=> {
     db.project.findAll({ 
@@ -28,17 +31,14 @@ router.get('/allPosted', (req, res)=> {
     })
 })
   
-//get route that creates the view of the new project and 
-// router.get('/projects/new', (req, res)=> {
-//     res.render('/allPosted')
-// })
+
   
 router.get('/images', (req, res)=> {
     res.render('/allPosted')
 })
 
 
-//need to build the forms post route
+//get route from new project form, makes a new project and posts the created project to the all projects page
 router.post('/new', uploads.single('inputFile'), (req, res)=> {
     const image = req.file.path
     const { title, description } = req.body;
@@ -58,21 +58,35 @@ router.post('/new', uploads.single('inputFile'), (req, res)=> {
     })
 })
 
-// router.post('/new', (req, res)=> {
-//     console.log(req.body);
-//     db.project.create({
-//         userId: req.params.id,
-//         title: req.body.title,
-//         description: req.body.description
-    
-// })
-// .then((creatProject)=> {
-//     console.log('**Created**');
-//     res.redirect('/allPosted')
-// }).catch((error)=>{
-//     console.log(error)
-// })
-// })
+//PUT route
+router.put('/allPosted/id', (req, res) => {
+    db.project.update({ 
+        profilePic: req.body.profilePic,
+        title: req.body.title,
+        description: req.body.description,
+        userId: req.body.userId
+    }, {
+        where: {
+            id: req.params.id
+        }
+    })
+    .then((updatedProject)=> {
+        console.log('Updated project= ',updatedProject);
+        res.redirect('/allPosted');
+    })
+})
 
+//DELETE Projects route
+router.delete('/allPosted/id', (req, res)=> {
+   db.project.destroy({
+       where: {
+           id: req.params.id
+       }
+   })
+   .then((deleted) => {
+       console.log('Deleted Project =', deleted);
+       res.redirect('/allProjects')
+   }) 
+})
   
 module.exports = router

@@ -4,6 +4,7 @@ const layouts = require('express-ejs-layouts');
 const session = require('express-session');
 const passport = require('./config/ppConfig'); //
 const flash = require('connect-flash');
+const methodOverride = require('method-override');
 // const cloudinary = require('cloudinary');
 // const multer = require('multer');
 // const uploads = multer({ dest: './uploads'});
@@ -18,6 +19,7 @@ const isLoggedIn = require('./middleware/isLoggedIn');
 const db = require('./models');
 
 ///MIDDLEWARE///
+app.use(methodOverride('_method'));
 app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));

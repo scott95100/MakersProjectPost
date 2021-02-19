@@ -2,6 +2,7 @@ const { request } = require('express')
 let express = require('express')
 let db = require('../models')
 let router = express.Router()
+const axios = require('axios')
 
 // GET /lumber search page 
 router.get('/new', (req, res) => {
@@ -10,39 +11,38 @@ router.get('/new', (req, res) => {
 
 
 router.get('/results', (req, res)=>{
-    request({
-        url: 'https://trefle.io/',
-        qs: {
-            s: req.query.searchTerm
+    let q = req.query.q
+    var qs = {
+        params: {
+            s: q,
+            apikey: process.env.API_KEY
         }
-    }, function(error, response, body) {
-        if(!error && response.statusCode === 200) {
-            const plantData = JSON.parse(body);
-            res.render('results.ejs', { Plant : plantData.Search });
-        }else {
-            res.send('Error');
-        }
-    })
+    };
+    axios.get('https://trefle.io', qs)
+        .then(function (response) {
+            let data = response.data.Search
+            res.render('results', {data})
+        })
 })
 
 
-router.get('/plant/:trefleId', (req, res)=> {
-    let trefleId = req.params.trefleId;
-    request({
-        url: 'https://trefle.io/',
-        qs: {
-            i: trefleId,
-            tomatoes: true
+router.get('/api/v1/species', (req, res)=> {
+    let plant_id = req.params.plant_id
+    var qs = {
+        params: {
+            i: plant_id,
+            apikey: process.env.API_KEY
         }
-    }, function (error, response, body) {
-        if(!error && response.statusCode ===200) {
-            const plantData = JSON.parse(body);
-            res.render('tree.ejs', { tree: plantData });
-        }else {
-            res.send('error');
-        }
-    })
+    };
+    axios.get('https://trefle.io', qs)
+        .then(function (response) {
+            let data = response.data
+            console.log(data)
+            res.render('lumber/detail', {data})
+        })
 })
+
+
 
 
 module.exports = router
