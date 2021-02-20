@@ -6,10 +6,6 @@
              <img class='userImage' src="<%= projectsArr[i].profilePic%> ">
              <p class='userTitle'><a href="/projects/<%=projectsArr[i].id%>"><%=projectsArr[i].title %></a></p> 
              <p class='userDescription'><%= projectsArr[i].description %></p>
-             
-             <form action="/projects/allPosted/<%=projectsArr[i].id%>?_method=DELETE" method="POST">
-                <button type="submit">Delete Project</button>
-            </form>
         </div>
     <%}%>
 
