@@ -21,7 +21,7 @@ router.get('/results', (req, res)=>{
     axios.get('https://trefle.io', qs)
         .then(function (response) {
             let data = response.data.Search
-            res.render('results', {data})
+            res.render('detail', {data})
         })
 })
 
@@ -38,7 +38,7 @@ router.get('/api/v1/species', (req, res)=> {
         .then(function (response) {
             let data = response.data
             console.log(data)
-            res.render('lumber/detail', {data})
+            res.render('detail', {data})
         })
 })
 

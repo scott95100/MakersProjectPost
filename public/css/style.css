@@ -1,59 +1,87 @@
+
+
 h1 {
-  display: flex;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width:fit-content;
   color: black;
-  background: white;
-  margin: 20px, 20px, 20px, 20px;
+  background:#8d6e63;
+  border: 10px solid #3e2723;
+  border-radius: 20%;
 }
 
 nav ul li {
-  
-  display: flex;
-  justify-content: center;
+  color: white;
   text-decoration: none;
   display: inline-block;
   margin-right: .5em;
-  background-color: rgba(246, 243, 243, 0.596);
+  background:#8d6e63;
 }
   
 .home {
   color: balck;
-  background-color: rgba(206, 192, 192, 0.596);
+  background:#8d6e63;
   display: flex
 }
 
 html body {
   background-image: url('https://images.creativemarket.com/0.1.0/ps/4339803/1820/1214/m1/fpnw/wm0/101-.jpg?1524463034&s=d1c2e4ddae34d9ab972c48b9c51bca19');
-  background-blend-mode: luminosity;
-  background-color: #cccccc;
-  height: 1500px;
+  background-color: black;
+  height: 1200px;
   background-position: center;
   background-repeat: no-repeat, repeat;
   background-size: cover;
   position: relative;
-  
- 
 }
 
-
-
 .userProject {
-  background-color: grey;
-  width: 300px;
-  border: 10px solid black;
-  padding: 15px;
-  background: rgb(117, 102, 102);
+  width: fit-content;
+  border: 10px solid #3e2723;
+  border-radius: 20%;
+  padding: 100px;
+  background:#8d6e63;
   background-clip: padding-box;
-  
-  
 }
 
 .userImage {
-  border: 10px solid white;
+  border: 10px solid #3e2723;
   border-radius: 20%;
-  height: 200px;
-  width: 200px;
-  opacity: .9;
-
+  height: 500px;
+  width: 500px;
 }
 
+.profileDisplay {
+  width: fit-content;
+  border: 10px solid #3e2723;
+  border-radius: 20%;
+  padding: 100px;
+  background:#8d6e63;
+  background-clip: padding-box;
+}
+
+.projectForm {
+  width: fit-content;
+  border: 10px solid #3e2723;
+  border-radius: 20%;
+  padding: 100px;
+  background:#8d6e63;
+  background-clip: padding-box;
+}
+
+.signUp {
+  width: fit-content;
+  border: 10px solid #3e2723;
+  border-radius: 20%;
+  padding: 100px;
+  background:#8d6e63;
+  background-clip: padding-box;
+}
+
+.logIn {
+  width: fit-content;
+  border: 10px solid #3e2723;
+  border-radius: 20%;
+  padding: 100px;
+  background:#8d6e63;
+  background-clip: padding-box;
+}
