@@ -1,25 +1,26 @@
 
+.navBrand {
+  margin-left: 25cm;
+  font-family: Chalkduster, fantasy;
+  padding-left: 1cm;
+  padding-right: 1cm;
+}
 
 h1 {
-  margin-left: auto;
-  margin-right: auto;
-  width:fit-content;
-  color: black;
+  display: inline-block;
+  justify-content: right;
   background:#8d6e63;
   border: 10px solid #3e2723;
-  border-radius: 20%;
+  border-radius: 30%;
 }
 
 nav ul li {
-  
-  
   display: inline-block;
-  margin-right: .5em;
-  
+  margin-right: .1em;
 }
   
 .home {
-  color: balck;
+  
   background:#8d6e63;
   display: flex
 }
@@ -41,6 +42,8 @@ html body {
   padding: 100px;
   background:#8d6e63;
   background-clip: padding-box;
+  margin-top: 2ch;
+  margin-bottom: 2cm;
 }
 
 .userImage {
@@ -60,6 +63,7 @@ html body {
 }
 
 .projectForm {
+  
   width: fit-content;
   border: 10px solid #3e2723;
   border-radius: 20%;

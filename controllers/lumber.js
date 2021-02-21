@@ -4,7 +4,7 @@ let db = require('../models')
 let router = express.Router()
 const axios = require('axios')
 
-// GET /lumber search page 
+// GET /lumber search page /nav bar
 router.get('/new', (req, res) => {
     res.render('lumber/new')
 })

@@ -16,20 +16,22 @@
             <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/auth/signup">Signup</a></button>
 
             <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/auth/login">Login</a></button>
+            <h1>Maker's Post</h1>
 
         <% } else { %>
           <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/auth/logout">Logout</a></button>
 
           <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/profile">Profile</a></button>
 
-          <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/lumber/new">Lumber Search</a></button>
           
           <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/projects/allPosted">View all Projects</a></button>
+          <h1 class="navBrand">Maker's Post</h1>
+          
           <% } %>
         </ul>
       </nav>
     </header>
-    <h1>Makers Projects!!</h1>
+    
     <%- body %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   </body>
