@@ -13,18 +13,18 @@
       <nav class="navbar navbar-dark bg-dark">
         <ul>
         <% if (!currentUser) {%>
-            <button type="button" class="btn btn-secondary btn-lg"><a href="/auth/signup">Signup</a></button>
+            <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/auth/signup">Signup</a></button>
 
-            <button type="button" class="btn btn-secondary btn-lg"><a href="/auth/login">Login</a></button>
+            <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/auth/login">Login</a></button>
 
         <% } else { %>
-          <button type="button" class="btn btn-secondary btn-lg"><a href="/auth/logout">Logout</a></button>
+          <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/auth/logout">Logout</a></button>
 
-          <button type="button" class="btn btn-secondary btn-lg"><a href="/profile">Profile</a></button>
+          <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/profile">Profile</a></button>
 
-          <button type="button" class="btn btn-secondary btn-lg"><a href="/lumber/new">Lumber Search</a></button>
+          <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/lumber/new">Lumber Search</a></button>
           
-          <button type="button" class="btn btn-secondary btn-lg"><a href="/projects/allPosted">View all Projects</a></button>
+          <button type="button" class="btn btn-secondary btn-lg"><a class="text-white bg-dark" href="/projects/allPosted">View all Projects</a></button>
           <% } %>
         </ul>
       </nav>
