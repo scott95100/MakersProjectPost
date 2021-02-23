@@ -38,7 +38,7 @@ As a woodworker hobbiest I wanted a place to go and share/ discuss projects that
 
 #### 4. Technologies & Code Snippets
 
-
+site features use of cloudinary for image storage. 
 
 #### 5. credits
 
@@ -47,3 +47,7 @@ Insparation taken from vairous social media plateforms to include, Etsy, Faceboo
 
 #### 6. Future development
 
+Features under development.
+    - Lumber search engine for users to research different wood species for their projects
+    - user messageing database for users to interact and comment on others projects.
+    - multiple maker spaces styled and designed to the specific craft of the user. ex: woodworking landing page, metal working landing page.

@@ -100,7 +100,8 @@ router.post('/new', uploads.single('inputFile'), (req, res)=> {
             res.redirect('/projects/allPosted');
         })
     })
-}) 
+})
+
 
 
 module.exports = router
